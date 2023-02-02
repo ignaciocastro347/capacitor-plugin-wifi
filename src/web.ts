@@ -7,4 +7,10 @@ export class WifiPluginWeb extends WebPlugin implements WifiPluginPlugin {
     console.log('ECHO', options);
     return options;
   }
+
+  async getSSID(): Promise<{ ssid: string }> {
+    return {
+		ssid: "In web there is no way of getting wifi SSID"
+	};
+  }
 }
